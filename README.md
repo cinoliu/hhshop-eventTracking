@@ -81,7 +81,7 @@ export default tracks;
 
 打开控制台，查看是否成功收集
 
-![image](https://user-images.githubusercontent.com/2757932/1.jpg)
+![image](https://github.com/cinoliu/eventTracking/blob/master/img/1.jpg)
 
 element： 触发埋点元素class
 
