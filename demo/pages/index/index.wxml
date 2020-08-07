@@ -1,0 +1,35 @@
+<view class="page">
+  <!-- banner广告 -->
+  <view catchtap='elementTracker'>
+    <swiper class='banner' autoplay="{{true}}" indicator-dots="true">
+      <block wx:for='{{bannerList}}' wx:key='imgUrl'>
+        <swiper-item bindtap="toBannerDetail" data-test="{{item}}">
+          <image src='{{item.imgUrl}}' class='slide-image' />
+        </swiper-item>
+      </block>
+    </swiper>
+    <c-track-btn></c-track-btn>
+
+    <view class='playing-container'>
+      <view class='playing-item' data-index="{{index}}" data-test='ttes' wx:for='{{textList}}' wx:key='name'>
+    
+          <view class='info-container' bindtap="toTextDetail"  data-test="{{item}}">
+            <view>
+              <view class='name'>{{item.name}}</view>
+              <view class='total'>2020-08-06</view>
+            </view>
+            <view class='grade'>
+              <text>{{item.grade}}</text>
+            </view>
+          </view>
+       
+      </view>
+     
+    </view>
+  </view>
+
+<button  open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+     获取用户信息
+    </button>
+
+</view>

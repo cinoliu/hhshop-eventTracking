@@ -1,0 +1,18 @@
+<view catchtap='elementTracker'>
+ 
+   <view class='info-container' bindtap="toTextDetail"  data-test="{{film}}">
+            <view>
+              <view class='name'>{{film.name}}</view>
+              <view class='total'>2020-08-06</view>
+            </view>
+            <view class='grade'>
+              <text>{{film.grade}}</text>
+            </view>
+          </view>
+       
+
+
+  <view class='buy-now'>
+    <button bindtap='buy'>立即购买</button>
+  </view>
+</view>

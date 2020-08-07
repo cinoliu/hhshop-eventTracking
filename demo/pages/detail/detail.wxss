@@ -1,0 +1,40 @@
+page {
+  background: #ebebeb;
+}
+
+.info-container {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 26rpx;
+}
+
+.total {
+  font-size: 22rpx;
+  color: #9a9a9a;
+}
+
+.grade {
+  font-size: 36rpx;
+  color: #f78360;
+}
+.buy-now {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  bottom: 40rpx;
+}
+.buy-now button {
+  display: flex;
+  width: 300rpx;
+  height: 72rpx;
+  background-color: #fe8233;
+  color: #fff;
+  font-size: 28rpx;
+  justify-content: center;
+  align-items: center;
+  border-radius: 36rpx;
+}
