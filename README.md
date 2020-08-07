@@ -141,7 +141,7 @@ userInfo :当前用户信息 (读取storage)
 
 
  ```
- 
+
   ```
 
  /**
@@ -208,6 +208,6 @@ tracker.createComponent({
 
 ### 方案实现说明
 
-[小程序从手动埋点到自动埋点](https://www.jianshu.com/p/a4ff16840bfd)
+[小程序从手动埋点到自动埋点](https://www.jianshu.com/p/4c0c23b16ba1)
 
 
