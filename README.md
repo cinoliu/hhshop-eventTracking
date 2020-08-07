@@ -93,6 +93,8 @@ data：数据对应值
 
 remark : 备注
 
+userInfo :当前用户信息 (读取storage)
+
 
 5、如果你要监听组件内元素
 
@@ -112,6 +114,26 @@ remark : 备注
 核心还是利用了微信提供的选择器，可以[参考文档](https://developers.weixin.qq.com/miniprogram/dev/api/wxml/SelectorQuery.selectAll.html)
 
 
+6、数据提交
+
+ ```
+ /**
+   utils/apis.js
+**/
+
+  const httpServiceURL = '';
+  const logUrl = httpServiceURL+'/log/uploadLog'; 提交数据接口
+
+  const formHeader = {
+      'content-type': 'application/x-www-form-urlencoded;charset=utf-8',
+  };
+  const jsonHead = {
+      'content-type': 'application/json;charset=utf-8'
+  };
+
+
+
+ ```
 
 ### 特殊前缀
 
@@ -160,6 +182,5 @@ tracker.createComponent({
 ### 方案实现说明
 
 [小程序从手动埋点到自动埋点](https://www.jianshu.com/p/a4ff16840bfd)
-
 
 
