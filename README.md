@@ -117,8 +117,32 @@ userInfo :当前用户信息 (读取storage)
 6、数据提交
 
  ```
+
  /**
-   utils/apis.js
+   src/report.js
+**/
+
+  var data = {
+        logList: logger,
+        userInfo: wx.getStorageSync("userInfo")
+    };
+    wx.request({
+        url: apis.logUrl,
+        method: 'POST',
+        data: data,
+        header: apis.jsonHead,
+        success: res => {
+            console.log(res);
+        },
+        fail: res => {
+            console.log(res);
+        }
+    });
+
+
+
+ /**
+   demo/utils/apis.js
 **/
 
   const httpServiceURL = '';

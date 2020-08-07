@@ -8,7 +8,6 @@
 
 const apis = require('../../utils/apis.js');
 
-
 const resloveArrayDataKey = (key, index) => {
     const leftBracketIndex = key.indexOf('[');
     const rightBracketIndex = key.indexOf(']');
@@ -79,7 +78,6 @@ const dataReader = (key, dataset, pageData) => {
         return '';
     }
 };
-
 
 const report = (track, pageData) => {
     const { element, method, remark } = track;
