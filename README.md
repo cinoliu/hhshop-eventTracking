@@ -1,6 +1,5 @@
-## 亮点 ## 
+## 可自定义上传参数名 增加调试模式 ## 
 
-- 可自定义上传参数名 增加调试模式
 
 - ①. element： 触发埋点元素class
 - ②. method：触发埋点函数
@@ -12,7 +11,7 @@
 - ⑦. is_debug:调试
 */
 
-- 封装上传接口  uploadLog
+## 封装上传接口  uploadLog ## 
 
 - ①.具体参考demo/utils/apis.js
 
