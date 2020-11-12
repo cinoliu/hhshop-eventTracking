@@ -1,4 +1,51 @@
-# eventTracking 小程序自动埋点2.0 (可自定义上传参数名)
+# 小程序自动埋点2.0 (可自定义上传参数名 封装上传接口 支持微信和支付宝小程序)
+
+
+## 2.0亮点
+```
+ // 可自定义上传参数名 增加调试模式
+
+
+element： 触发埋点元素class
+
+method：触发埋点函数
+
+name：收集数据的key值
+
+data：数据对应值 ([{
+                  img: "playingFilms[$INDEX].imgUrls"
+              },
+              {
+                  filmId: "playingFilms[$INDEX].filmId"
+              },
+              {
+                  item: "playingFilms[0]"
+              },
+              {
+                  testName: 'test.name'
+              }
+          ])
+
+remark : 备注
+
+userInfo :当前用户信息 (读取storage)
+
+is_debug:调试
+
+
+// 封装上传接口  uploadLog
+
+
+/**
+ demo/utils/apis.js
+**/
+
+
+
+
+```
+
+
 ### 使用方法
 
 1、App.js文件引入资源
@@ -8,11 +55,7 @@
 import Tracker from './eventTracking.min.js';
 // 引入埋点配置信息，请自行参考tracks目录下埋点配置修改
 import trackConfig from './tracks/index';
-```
-
-2、初始化
-
-```
+// 初始化
 new Tracker({ tracks: trackConfig });
 ```
 
@@ -99,23 +142,7 @@ export default tracks;
 </view>
 ```
 
-打开控制台，查看是否成功收集
 
-![image](https://github.com/cinoliu/eventTracking/blob/master/img/1.jpg)
-
-element： 触发埋点元素class
-
-method：触发埋点函数
-
-name：收集数据的key值
-
-data：数据对应值
-
-remark : 备注
-
-userInfo :当前用户信息 (读取storage)
-
-is_debug:启动调试
 
 
 5、如果你要监听组件内元素
@@ -136,53 +163,7 @@ is_debug:启动调试
 核心还是利用了微信提供的选择器，可以[参考文档](https://developers.weixin.qq.com/miniprogram/dev/api/wxml/SelectorQuery.selectAll.html)
 
 
-6、数据提交
 
- ```
-
- /**
-   src/report.js
-**/
-
-  var data = {
-        logList: logger,
-        userInfo: wx.getStorageSync("userInfo")
-    };
-    wx.request({
-        url: apis.logUrl,
-        method: 'POST',
-        data: data,
-        header: apis.jsonHead,
-        success: res => {
-            console.log(res);
-        },
-        fail: res => {
-            console.log(res);
-        }
-    });
-
-
- ```
-
-  ```
-
- /**
-   demo/utils/apis.js
-**/
-
-  const httpServiceURL = '';
-  const logUrl = httpServiceURL+'/log/uploadLog'; 提交数据接口
-
-  const formHeader = {
-      'content-type': 'application/x-www-form-urlencoded;charset=utf-8',
-  };
-  const jsonHead = {
-      'content-type': 'application/json;charset=utf-8'
-  };
-
-
-
- ```
 
 ### 特殊前缀
 
