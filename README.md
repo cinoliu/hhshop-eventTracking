@@ -69,34 +69,6 @@ const tracks = {
           remark: '获取banner',
           is_debug: true, 
       },
-      {
-          method: 'getText',
-
-          dataList: [{
-              playingFilms: "playingFilms"
-          }],
-          remark: '获取内容',
-          is_debug: false, 
-      },
-      {
-          method: 'toBannerDetail',
-          remark: '点击banner',
-
-          dataList: [{
-              imgUrls: "imgUrls"
-          }, {
-              test: "$DATASET.test"
-          }],
-          is_debug: false, 
-      },
-      {
-          method: 'toTextDetail',
-          remark: '点击内容',
-          dataList: [{
-              test: "$DATASET.test"
-          }],
-          is_debug: false, 
-      },
   ],
 };
 
@@ -111,8 +83,6 @@ export default tracks;
 	<view></view>
 </view>
 ```
-
-
 
 
 5、如果你要监听组件内元素
