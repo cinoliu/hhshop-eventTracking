@@ -1,22 +1,21 @@
-# 小程序自动埋点2.0 (可自定义上传参数名 封装上传接口 支持微信和支付宝小程序)
+# 小程序自动埋点2.0 
 
 
-## 2.0亮点
+## 亮点
 ```
- // 可自定义上传参数名 增加调试模式
+ - 可自定义上传参数名 增加调试模式
 /**
 *element： 触发埋点元素class
 *method：触发埋点函数
 *name：收集数据的key值
 *data：数据对应值 
 [{ img: "playingFilms[$INDEX].imgUrls" }, { filmId: "playingFilms[$INDEX].filmId" }]
-
 *remark : 备注
 *userInfo :当前用户信息 (读取storage)
 *is_debug:调试
 */
 
-// 封装上传接口  uploadLog
+- 封装上传接口  uploadLog
 
 具体参考demo/utils/apis.js
 
