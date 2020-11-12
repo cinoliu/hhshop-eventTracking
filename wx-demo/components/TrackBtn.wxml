@@ -1,0 +1,1 @@
+<button class="sub-component" data-test="{{name}}">组件埋点测试</button>
